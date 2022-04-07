@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<tittle>ABOUT US</tittle>
+<link rel="stylesheet"href="style.css">
+<style>
+    html {
+        background: url("OIF.jpg") no-repeat center fixed;
+        background-size: cover;
+
+    }
+    body{
+        color: white;
+    }
+</style>
+</head>
+
+
+<body>
+<h1>OUR STORY</B>
+
+<p style="color:red;font-size:90%;font-family:verdana;">The bakery is one of the most cherished bakeshops in Gaborone and it has the set the standard for tried and true desserts and baked goods.</p>
+<p style="color:blue;font-size:90%;font-family:verdana;">We are an establishment that produces and sells flour based food baked in oven such a bread,cookies,cakes and pies</p>
+
+
+<h2>JOIN OUR TEAM</h2>
+<div>Hospitality is at the heart of Boipelo's Bakery experience.</div>
+<div>We believe a respectful,empathetic working environment is crucial to creating a positive team experience and keeping guests.</div>
+
+<h3>GIVING BACK</h3>
+
+<p style="font-size:160%;color:blue;">Even though we are famous,Boipelo's Bakery remains a neighborhood bakery at heart.</p>
+<p> Click on the button to get your cordinates</p>
+
+
+
+
+<button onclick="getLocation()">Try it</button>
+
+<p id="demo"></p>
+<script>
+    var x=document.getElementById("demo");
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(showPosition);
+        } else {
+            x.innerHTML= "Geo location is not supported by this browser.";
+        }
+    }
+    function showPosition(position)  {
+        x.innerHTML="Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+    }
+    </script>
+</body>
+</html>
